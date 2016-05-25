@@ -1,4 +1,4 @@
-# Grape Cache
+# Grape Cache [![Build Status](https://travis-ci.org/gabrielcorado/grape_cache.svg?branch=develop)](https://travis-ci.org/gabrielcorado/grape_cache) [![Gem Version](https://badge.fury.io/rb/grape_cache.svg)](https://badge.fury.io/rb/grape_cache)
 ```
 +-----------+     Cached?
 |  Request  +------------------+
