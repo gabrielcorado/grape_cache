@@ -25,7 +25,7 @@ Gem::Specification.new do |s|
   # s.add_dependency 'docker-api', '~> 1.26'
   s.add_dependency 'multi_json'
   s.add_dependency 'oj'
-  s.add_dependency 'grape', '~> 0.16'
+  s.add_dependency 'grape', '>= 0.10'
 
   # Development depencies
   s.add_development_dependency 'rspec', '~> 3.0'
