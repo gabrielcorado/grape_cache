@@ -1,5 +1,11 @@
 language: ruby
 rvm:
-  - 2.3.0
+- 2.3.0
 script:
-  - bundle exec rspec
+- bundle exec rspec
+deploy:
+  provider: rubygems
+  api_key:
+    secure: WoVGyPjYf5uw2HmlPQbDrnjGU3Oq2WBNFHXV9pJGYOy+nf52Rt9FgHnHtmT7jVh9X+DdJNfoJTJkyoqiIX5nmum3wrAjY7LyUSSKySe6N/c5ot3VrfBLz7upPjF+Y7B5YWYoji8kYXXWbF0Pzy/Mnr12mQ3Ti/iO8HnykvZdN4RyZZiqhcibLvM2BFrGLR6quCh3TmoAyiOmpZMZXCDiDzP4jaSCJ9qtfymrTlCqTNSV588KesNHQPhr20CoyVVchNsqopLgqO3Wl9/sxCFCx8YTONerktNDqlUG9ERtW0kZc1wckYYB8LQciUfJntq0dvJDM2jzniPJ1ZGGPL5czgDoCfgidO8oh6zBAEhy/dfBTSWpgAE5avIfpF6KLSgNEw7phaHWmpEXlXuLcC+hraI0BnpYK/7vBxdPM7/mfKHQBce6L5nabnmzWMqaTInAUJy1nvNL5+I0xQhmxZ0uvxEcFNFXS7HTjfm6R44FRKCAhB54YZl6tKcF45Z5bDxN8ED3NlomW6PXuTe3GTdpXWFiBRPU0UAzJkIm7L+cdndbzwDSOC+R4qVESQzJr7NqfkhvYd+Nxn192dtljhGyrNrEoxQ2hoWR4f9ZCREMYixNJk6HXoycCiIePdwPeKzialE4WhrWVLWtkc6NTP3Xq54ct+pW/CjD9lmOi1HO324=
+  on:
+    tags: true
