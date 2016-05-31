@@ -60,6 +60,7 @@ module GrapeCache
 
     # Check if the current route has cache
     def cache?
+      return false endpoint.options.nil?
       endpoint.options.fetch(:route_options, {}).fetch(:cache, false)
     end
 
