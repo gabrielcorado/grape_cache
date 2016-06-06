@@ -94,7 +94,7 @@ module GrapeCache
       return nil if @options[:namespace].nil?
 
       # Call it if it's a Proc
-      @options[:namespace].proc? ? @options[:namespace].call : @options[:namespace]
+      @options[:namespace].is_a?(Proc) ? @options[:namespace].call : @options[:namespace]
     end
 
     # Route
