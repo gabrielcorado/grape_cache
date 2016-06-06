@@ -2,6 +2,6 @@
 module GrapeCache
   # Gem version
   def self.version
-    '0.2.0'.freeze
+    '0.2.1'.freeze
   end
 end
