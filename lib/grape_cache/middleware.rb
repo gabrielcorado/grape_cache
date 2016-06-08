@@ -4,27 +4,25 @@ module GrapeCache
   class Middleware < Grape::Middleware::Base
     # Overwriting the method call! from Grape::Middleware::Base
     # Reason: Make the :before call to return the whole stack
-		def call!(env)
-			@env = env
+    def call!(env)
+      @env = env
       # Just here is moving!
       before_res = before
       return before_res unless before_res.nil?
       # end the overwrite
-			begin
-				@app_response = @app.call(@env)
-			ensure
-				begin
-					after_response = after
-				rescue StandardError => e
-					warn "caught error of type #{e.class} in after callback inside #{self.class.name} : #{e.message}"
-					raise e
-				end
-			end
+      @app_response = @app.call(@env)
 
-			response = after_response || @app_response
-			merge_headers response
-			response
-		end
+      begin
+        after_response = after
+      rescue StandardError => e
+        warn "caught error of type #{e.class} in after callback inside #{self.class.name} : #{e.message}"
+        raise e
+      end
+
+      response = after_response || @app_response
+      merge_headers response
+      response
+    end
 
     #
     def after
