@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    grape_cache (0.2.3)
+    grape_cache (0.2.4)
       grape (~> 0.16)
       multi_json
       oj
