@@ -80,7 +80,7 @@ module GrapeCache
       res = "grape_cache/#{digest(route)}/#{digest(opts)}"
 
       # Add the namespace (if its necessary)
-      "#{ns}/#{res}" if ns.nil?
+      "#{ns}/#{res}" unless ns.nil?
 
       # Return the result
       res
